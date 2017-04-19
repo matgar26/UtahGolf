@@ -1,0 +1,30 @@
+h1 Listing courses
+
+table
+  thead
+    tr
+      th Name
+      th Address
+      th City
+      th State
+      th Zip
+      th Price
+      th Image path
+      th
+      th
+      th
+
+  tbody
+    - @courses.each do |course|
+      tr
+        td = course.name
+        td = course.address
+        td = course.city
+        td = course.state
+        td = course.zip
+        td = course.price
+        td = course.image_path
+
+br
+
+= link_to 'New Course', new_course_path

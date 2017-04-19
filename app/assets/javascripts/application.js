@@ -12,6 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require turbolinks
 //= require_tree .
-//= requre bootstrap-sprockets
+//= require bootstrap-sprockets
+document.addEventListener("DOMContentLoaded", function (event) {
+    var element = document.getElementById('wholePage');
+    var height = element.offsetHeight;
+    if (height < screen.height) {
+        document.getElementById("footer").classList.add('stikybottom');
+    }
+}, false);

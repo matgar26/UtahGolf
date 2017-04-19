@@ -1,0 +1,71 @@
+.jumbo style="background-image: url(#{image_path "#{@course.image_path}"})"
+.container
+  p.RobotoLight COURSE DETAILS
+  .midContainer
+    .leftDiv 
+      h1.CourseName
+        = @course.name
+      br
+      p.bodyText 
+        = @course.description
+    .rightDiv
+      p.address
+        = @course.address
+      p.address
+        = @course.city + ", "
+        = @course.state + ", "
+        = @course.zip
+      br
+      br
+      p.price
+        =@course.price
+      p.subPrice 9 holes
+      br
+      br
+      p.price
+        =@course.pricefull
+      p.subPrice 18 holes
+  .bottomDiv
+    p.RobotoLight COURSE
+    h1 COMMENTS
+    - @reviews.each do |review|
+        br
+        .commentDiv
+          p.bodyText2 = review.user.email
+          p = review.subject
+          p.bodyText = review.description
+          / p = review.rating
+    br
+    = form_for @review do |f|
+      - if @review.errors.any?
+        #error_explanation
+          h2 = "#{pluralize(@review.errors.count, "error")} prohibited this review from being saved:"
+          ul
+            - @review.errors.full_messages.each do |message|
+              li = message
+
+      form.form-horizontal
+        .field
+          = f.hidden_field :course_id, value: params[:id]
+        .form-group
+          label.sr-only for="exampleInputEmail3"  Email address
+          = f.label :subject
+          = f.text_field :subject, class:'form-control'
+        .field
+          = f.label :description
+          = f.text_area :description, class:'form-control'
+        buttons = f.submit class: 'btn btn-default'
+
+/ = link_to 'Edit', edit_course_path(@course)
+/ '  |
+/ = link_to 'Back', courses_path
+
+
+  / tbody
+  /   - @reviews.each do |review|
+  /     br
+  /     tr
+  /       td = review.user.email
+  /       td = review.subject
+  /       td = review.description
+  /       td = review.rating

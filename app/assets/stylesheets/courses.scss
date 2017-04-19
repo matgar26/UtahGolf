@@ -1,0 +1,117 @@
+// Place all the styles related to the courses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.jumbo{
+  background-size:cover;
+  background-position:center;
+  min-height: 30em;
+}
+.container{
+
+}
+
+.midContainer{
+  display: flex;
+  flex-direction: row;
+  // flex-wrap: wrap;
+}
+
+.leftDiv{
+  order: 1;
+  flex: 3;
+  border-top: 1px solid #DEDEDE;
+  border-right: 1px solid #DEDEDE;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
+.rightDiv{
+  order: 2;
+  flex: 1;
+  border-top: 1px solid #DEDEDE;
+  text-align: right;
+  padding-top: 13px;
+}
+
+.bottomDiv{
+  border-top: 1px solid #DEDEDE;
+}
+
+.RobotoLight{
+  margin-top: 50px;
+  font-family: Roboto-Light;
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 1.56px;
+}
+
+.CourseName{
+  font-family: RobotoSlab-Bold;
+  font-size: 40px;
+  color: #000000;
+  letter-spacing: 4.44px;
+  line-height: 37px;
+}
+
+.bodyText{
+  font-family: Roboto-Regular;
+  font-size: 14px;
+  color: #8B8B8B;
+  letter-spacing: 0;
+  line-height: 21px;
+}
+
+.bodyText2{
+  font-family: RobotoSlab-Regular;
+  font-size: 18px;
+  color: #000000;
+  letter-spacing: 2px;
+  // line-height: 37px;
+}
+
+.address{
+  font-family: Roboto-Medium;
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 1.56px;
+  // margin-left: 0;
+}
+
+.price{
+  font-family: RobotoSlab-Regular;
+  font-size: 60px;
+  color: #DEDEDE;
+  letter-spacing: 0;
+}
+
+.subPrice{
+  padding-top: 13px;
+  font-family: Roboto-Regular;
+  font-size: 14px;
+  color: #8B8B8B;
+  letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+  .midContainer{
+    display: flex;
+    flex-direction: column;
+    // flex-wrap: wrap;
+  }
+
+  .leftDiv{
+    order: 1;
+    flex: 3;
+    border-top: 1px solid #DEDEDE;
+    padding-right: 40px;
+    padding-bottom: 40px;
+  }
+
+  .rightDiv{
+    order: 2;
+    flex: 1;
+    border-top: 1px solid #DEDEDE;
+    text-align: center;
+    padding-top: 13px;
+  }
+}

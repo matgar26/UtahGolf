@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>APPNAMERails</title>
+    <title>Utah Golf</title>
     <%= csrf_meta_tags %>
-
+    <link rel="icon" type="image/png" href="/assets/logo">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div id="wholePage">
+      <%= render '/layouts/nav' %>
+      <%= yield %>
+      <div id="footer">
+        <div class = "bottom-black">
+          <div class = "bottomLogo">
+            <%= embedded_svg "bottomLogo.svg" %>
+          </div>
+          <div class = "bottomTextGroup">
+            <p class = "bottomText">TOURNAMENTS</p>
+            <p class = "bottomText">COURSES</p>
+            <p class = "bottomText">LESSONS</p>
+          </div>
+          <div class = "rightGroup"></div>
+        </div>
+        <div class = "bottom-yellow">
+        </div>
+      </div>
+    </div>
   </body>
+
 </html>

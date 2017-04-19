@@ -37,6 +37,7 @@ gem 'devise'
 gem 'slim-rails'
 # Use Bootstrap for UI Goodness
 gem 'bootstrap-sass'
+gem 'nokogiri'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -17,3 +17,92 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+a:hover {
+  background-color: #ffffff;
+}
+
+.mainContainer{
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+.logo{
+  flex: 1;
+  padding-top: 15px;
+  padding-left: 50px;
+  left: 0;
+  top:0;
+  bottom: 0;
+}
+
+.user{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  right: 0;
+  text-align: right;
+  justify-content: center;
+  padding-right: 40px;
+}
+
+.name{
+    /* MICHAEL: */
+  font-family: Roboto-Black;
+  font-size: 15px;
+  color: #323232;
+  letter-spacing: 2.75px;
+  line-height: 11px;
+}
+
+#footer{
+  margin-top: 50px;
+}
+
+#footer.stikybottom {
+    position: fixed;
+    bottom:0;
+    left: 0;
+    right:0;
+}
+
+.bottom-black{
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.bottom-yellow{
+  background-color: #F0961D;
+  width: 100%;
+  height: 16px;
+}
+
+.bottomLogo{
+  padding-left: 15px;
+  display: inline;
+  flex: 1;
+  left: 0;
+  text-align: left;
+}
+.bottomTextGroup{
+  display: inline-flex;
+  flex: 4;
+  width: 30%;
+}
+.bottomText{
+  display: inline;
+  flex: 1;
+  text-align: center;
+  // padding: 10px;
+  font-family: Roboto-Medium;
+  font-size: 12px;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+}
+.rightGroup{
+  flex: 1;
+}

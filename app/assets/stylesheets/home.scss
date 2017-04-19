@@ -1,3 +1,52 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.courses {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+
+  .courseCard {
+    display: flex;
+    margin: 30px;
+    height: 255px;
+    width: 255px;
+    align-items: flex-end;
+    position: relative;
+    background-size: cover;
+
+    .overlay {
+      background-color: rgba(30,30,30,0.5);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-align: left;
+    }
+
+    .overlay:hover {
+      background-color: rgba(30,30,30,0.9);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    p {
+      padding: 17px;
+    }
+  }
+
+  .courseName {
+    position: absolute;
+    bottom:0;
+    left: 0;
+    font-family: RobotoSlab-Bold;
+    font-size: 40px;
+    color: #ffffff;
+    letter-spacing: 4.44px;
+    line-height: 37px;
+  }
+}

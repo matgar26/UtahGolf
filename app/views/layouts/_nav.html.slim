@@ -1,0 +1,19 @@
+.mainContainer
+  / = link_to 'index', :controller =>"home"
+  
+  .logo  
+    = link_to home_index_path
+      = embedded_svg "logo.svg"
+  .user
+    
+    / p.logout LOG OUT
+    -if current_user
+      p.name 
+        = current_user.email
+      = link_to (destroy_user_session_path), :method => :delete
+         | Logout
+    -else
+      p.name 
+      = link_to (new_user_session_path)
+         | Login
+  
